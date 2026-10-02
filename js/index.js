@@ -52,7 +52,7 @@ convert_btn.addEventListener("click", () => {
       const Input_Num = parseFloat(form_input.value) || 1;
       const To_Ratio = data.conversion_rates[to.value];
       const Output_Num = Input_Num * To_Ratio;
-      display.innerHTML = `<h1 class="fs-3 fw-semibold text-light text-center">${Input_Num} ${from.value}=${Output_Num.toFixed(2)} ${to.value}</h1>`;
+      display.innerHTML = `<h1 class="fs-3 fw-semibold text-light text-center">${Input_Num} ${from.value} = ${Output_Num.toFixed(2)} ${to.value}</h1>`;
       form_input.value = "";
     })
     .catch(
