@@ -35,8 +35,6 @@
     linear-gradient(90deg, #030d10 0%, #082127 50%, #0b2c33 100%);
 }
 .converter-card {
-  width: 60%;
-  max-width: 600px;
   background:
     radial-gradient(
       circle at 100% 100%,
@@ -66,5 +64,8 @@
   .mediaq {
     flex-direction: column;
     gap: 2rem;
+  }
+  .amount_center {
+    text-align: center;
   }
 }

@@ -22,56 +22,63 @@
         />
         <p class="fs-1 text-warning fw-bold">Currency-Converter</p>
       </div>
+      <div class="container my-auto">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-lg-6 col-md-10 col-12">
+            <div class="converter-card p-4 rounded-4 shadow">
+              <form class="converter-form">
+                <div
+                  class="d-flex justify-content-center align-items-center flex-column gap-3"
+                >
+                  <label class="w-100 fs-5 text-light amount_center"
+                    >Amount</label
+                  >
+                  <div class="d-flex justify-content-between w-100">
+                    <input
+                      type="text"
+                      class="w-100 form-control transparent_bg border-0 amount-input form_input"
+                      placeholder="1 By Default"
+                    />
+                    <button class="transparent_bg btn form_icon" type="button">
+                      <i
+                        class="fa-solid fa-arrow-right-arrow-left fs-4 text-light"
+                      ></i>
+                    </button>
+                  </div>
+                  <div
+                    class="w-100 justify-content-center d-flex from_cont gap-2"
+                  >
+                    <img src="" alt="" class="from_img" />
+                    <select
+                      id="from"
+                      name="from"
+                      class="w-75 form-select form_color from"
+                    ></select>
+                  </div>
+                  <div
+                    class="w-100 justify-content-center d-flex to_cont gap-2"
+                  >
+                    <img src="" alt="" class="to_img" />
+                    <select
+                      id="to"
+                      name="to"
+                      class="w-75 form-select form_color to"
+                    ></select>
+                  </div>
 
-      <div
-        class="w-100 flex-grow-1 d-flex justify-content-center align-items-center p-3"
-      >
-        <div class="converter-card p-4 rounded-4 shadow">
-          <form class="converter-form">
-            <div
-              class="d-flex justify-content-center align-items-center flex-column gap-3"
-            >
-              <label class="w-100 fs-5 text-light">Amount</label>
-              <div class="d-flex justify-content-between w-100">
-                <input
-                  type="text"
-                  class="w-100 form-control transparent_bg border-0 amount-input form_input"
-                  placeholder="1 By Default"
-                />
-                <button class="transparent_bg btn form_icon" type="button">
-                  <i
-                    class="fa-solid fa-arrow-right-arrow-left fs-4 text-light"
-                  ></i>
-                </button>
-              </div>
-              <div class="w-100 justify-content-center d-flex from_cont gap-2">
-                <img src="" alt="" class="from_img" />
-                <select
-                  id="from"
-                  name="from"
-                  class="w-75 form-select form_color from"
-                ></select>
-              </div>
-              <div class="w-100 justify-content-center d-flex to_cont gap-2">
-                <img src="" alt="" class="to_img" />
-                <select
-                  id="to"
-                  name="to"
-                  class="w-75 form-select form_color to"
-                ></select>
-              </div>
-
-              <button
-                type="button"
-                class="w-50 btn btn-dark form_color text-light convert_btn"
-              >
-                Convert
-              </button>
+                  <button
+                    type="button"
+                    class="w-50 btn btn-dark form_color text-light convert_btn"
+                  >
+                    Convert
+                  </button>
+                </div>
+              </form>
+              <div
+                class="display d-flex justify-content-center align-items-center mt-5"
+              ></div>
             </div>
-          </form>
-          <div
-            class="display d-flex justify-content-center align-items-center mt-5"
-          ></div>
+          </div>
         </div>
       </div>
     </div>
