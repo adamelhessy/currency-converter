@@ -166,32 +166,28 @@ const COUNTRY_NAMES = {
   ZAR: "South African Rand",
   ZMW: "Zambian Kwacha",
 };
+
 const COUNTRIES_Logos = (code) =>
   `https://flagsapi.com/${exceptions[code] || code.slice(0, -1)}/shiny/32.png`;
+
 const CURRENCY_API = (base) =>
   `https://v6.exchangerate-api.com/v6/08af225b77295bfd9267f755/latest/${base}`;
-const SelectTemplate = ({ conversion_rates }) =>
-  Object.keys(conversion_rates)
+
+const SelectTemplate = (countries) =>
+  Object.keys(countries)
     .map(
       (code) =>
         `<option value="${code}">${code} - ${COUNTRY_NAMES[code] || code}</option>`,
     )
     .join("");
 
-fetch(CURRENCY_API("USD"))
-  .then((response) => response.json())
-  .then((data) => {
-    from.innerHTML = SelectTemplate(data);
-    to.innerHTML = SelectTemplate(data);
-    from.value = "USD";
-    to.value = "EGP";
-    from_img.src = COUNTRIES_Logos(from.value);
-    to_img.src = COUNTRIES_Logos(to.value);
-  })
-  .catch(
-    (err) =>
-      (display.innerHTML = `<h1 class="fs-3 fw-semibold text-light">Conversion failed. Please try again.</h1>`),
-  );
+from.innerHTML = SelectTemplate(COUNTRY_NAMES);
+to.innerHTML = SelectTemplate(COUNTRY_NAMES);
+from.value = "USD";
+to.value = "EGP";
+from_img.src = COUNTRIES_Logos(from.value);
+to_img.src = COUNTRIES_Logos(to.value);
+
 from.addEventListener("change", () => {
   from_img.src = COUNTRIES_Logos(from.value);
 });

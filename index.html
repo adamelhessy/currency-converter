@@ -7,68 +7,65 @@
     <link rel="stylesheet" href="css/all.min.css" />
     <link rel="stylesheet" href="css/index.css" />
     <link rel="icon" href="media/currency-img.jpeg" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
     <title>Exchanger</title>
   </head>
   <body>
     <div class="vh-100 w-100 d-flex flex-column bw-gradient">
-      <div
-        class="d-flex justify-content-evenly top-header w-100 p-3 align-items-center mediaq"
-      >
-        <img
-          src="media/currency-img.jpeg"
-          alt="currency img "
-          style="width: 80px"
-          class="rounded-4"
-        />
-        <p class="fs-1 text-warning fw-bold">Currency-Converter</p>
-      </div>
       <div class="container my-auto">
         <div class="row justify-content-center align-items-center">
           <div class="col-lg-6 col-md-10 col-12">
-            <div class="converter-card p-4 rounded-4 shadow">
+            <div class="d-flex w-100 p-3">
+              <p class="fs-4 text-light fw-semibold text-left">
+                Currency <span>Converter</span>
+              </p>
+            </div>
+            <div class="converter-card p-4 rounded-4 shadow border-style">
               <form class="converter-form">
                 <div
                   class="d-flex justify-content-center align-items-center flex-column gap-3"
                 >
-                  <label class="w-100 fs-5 text-light amount_center"
+                  <label class="w-100 fs-5 text-light text_center"
                     >Amount</label
                   >
-                  <div class="d-flex justify-content-between w-100">
+                  <div class="d-flex justify-content-between w-100 gap-2">
                     <input
                       type="text"
                       class="w-100 form-control transparent_bg border-0 amount-input form_input"
                       placeholder="1 By Default"
                     />
-                    <button class="transparent_bg btn form_icon" type="button">
-                      <i
-                        class="fa-solid fa-arrow-right-arrow-left fs-4 text-light"
-                      ></i>
-                    </button>
+                    <div
+                      class="d-flex justify-content-center rounded-circle form_color py-1"
+                    >
+                      <button
+                        class="transparent_bg btn form_icon"
+                        type="button"
+                      >
+                        <i
+                          class="fa-solid fa-arrow-right-arrow-left fs-5 text-warning"
+                        ></i>
+                      </button>
+                    </div>
                   </div>
                   <div
                     class="w-100 justify-content-center d-flex from_cont gap-2"
                   >
                     <img src="" alt="" class="from_img" />
-                    <select
-                      id="from"
-                      name="from"
-                      class="w-75 form-select form_color from"
-                    ></select>
+                    <select class="w-75 form-select form_color from"></select>
                   </div>
                   <div
                     class="w-100 justify-content-center d-flex to_cont gap-2"
                   >
                     <img src="" alt="" class="to_img" />
-                    <select
-                      id="to"
-                      name="to"
-                      class="w-75 form-select form_color to"
-                    ></select>
+                    <select class="w-75 form-select form_color to"></select>
                   </div>
 
                   <button
                     type="button"
-                    class="w-50 btn btn-dark form_color text-light convert_btn"
+                    class="w-50 btn btn-dark btn-color text-black convert_btn fw-semibold p-2"
                   >
                     Convert
                   </button>
